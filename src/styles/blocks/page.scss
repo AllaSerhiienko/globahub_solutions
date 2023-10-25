@@ -1,0 +1,18 @@
+.page {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #000;
+
+  scroll-behavior: smooth;
+
+  &__body {
+    margin: 0;
+
+  // & .header__bottom-content {
+  //     opacity: 1; // Зробити текст видимим при завантаженні
+  //     transform: translateY(0); // Повернути положення в початкову позицію
+  //   }
+  }
+}
