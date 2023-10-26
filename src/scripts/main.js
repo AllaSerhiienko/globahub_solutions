@@ -17,14 +17,4 @@ function submit(event) {
 
 form.addEventListener('submit', submit);
 
-// window.addEventListener('DOMContentLoaded', function () {
-//   const container = document.querySelector('.header__animation-container');
-//   if (container) {
-//     const backgroundImage = container.style.backgroundImage;
-//     const newVersion = Date.now(); // Генеруємо нову версію зображення на основі часу
-
-//     // Замінюємо параметр запиту в CSS background-image
-//     container.style.backgroundImage = backgroundImage.replace(/\?version=\d+/, `?version=${newVersion}`);
-//   }
-// });
 

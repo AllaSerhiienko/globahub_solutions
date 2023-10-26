@@ -1,4 +1,6 @@
 .page {
+  margin: 0;
+  padding: 0;
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -14,7 +16,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: top right;
-  
+
     @include onDesktop {
       background-size: 55%;
     }
@@ -40,6 +42,34 @@
 
     &:target {
       transform: translateX(0);
+    }
+  }
+
+  &__section {
+    margin-bottom: 60px;
+
+    @include onDesktop {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__section-title {
+    margin: 0 0 30px;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -1px;
+
+    @include onTablet {
+      margin-bottom: 50px;
+      font-size: 2.625rem;
+    }
+
+    @include onDesktop {
+      // margin-bottom: 50px;
+      // font-size: 2.625rem;
     }
   }
 }

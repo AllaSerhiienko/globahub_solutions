@@ -12,7 +12,7 @@
     <script src="scripts/main.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="page__section header">
+    <header class="header">
       <div class="container">
         <div class="header__content">
           <div class="header__top">
@@ -44,10 +44,7 @@
             </div>
 
             <div class="grid__item grid__item--desktop-7-12">
-              <!-- <div class="header__animation-container"> -->
                 <object data="./images/header.svg" type="image/svg+xml" class="header__animation"></object>
-                <!-- <img src="./images/header.svg" alt=""> -->
-              <!-- </div> -->
             </div>
           </div>
         </div>
@@ -103,19 +100,57 @@
       </div>
     </nav>
 
-    <!-- <script>
-      window.addEventListener('DOMContentLoaded', function () {
+    <main>
+      <section class="page__section advantages">
+        <div class="container">
+          <div class="advantages__content">
+            <h2 class="page__section-title advantages__title">
+              No-fuss onboarding for end-users around the globe
+            </h2>
 
-        const container = document.querySelector('.header__animation-container');
-        console.log(container);
-        if (container) {
-          const backgroundImage = container.style.backgroundImage;
-          const newVersion = Math.floor(Math.random() * 1000); // Генеруємо нову версію зображення на основі часу
+            <div class="advantages__cards">
+              <div class="advantages__card advantage-card">
+                <img src="./images/advantages1.svg" alt="" class="advantage-card__image">
 
-          // Замінюємо параметр запиту в CSS background-image
-          container.style.backgroundImage = backgroundImage.replace(/\?version=\d+/, `?version=${newVersion}`);
-        }
-      });
-    </script> -->
+                <h3 class="advantage-card__title">
+                  Increase conversion
+                </h3>
+
+                <p class="advantage-card__description">
+                  Send conversion rates soaring with seamless account registration and login alongside quick and easy user validation.
+                </p>
+              </div>
+
+              <div class="advantages__card advantage-card">
+                <img src="./images/advantages2.svg" alt="" class="advantage-card__image">
+
+                <h3 class="advantage-card__title">
+                  Prevent fraud
+                </h3>
+
+                <p class="advantage-card__description">
+                  Reduce unauthorized account activity with SMS OTP for two-factor authentication (2FA) on sign-up, login, and transaction approvals. 
+                </p>
+              </div>
+
+              <div class="advantages__card advantage-card">
+                <img src="./images/advantages3.svg" alt="" class="advantage-card__image">
+
+                <h3 class="advantage-card__title">
+                  Scale globally
+                </h3>
+
+                <p class="advantage-card__description">
+                  Take on the world! Scale with ease thanks to our expert local knowledge combined with deep carrier integration.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </section>
+    </main>
   </body>
 </html>
