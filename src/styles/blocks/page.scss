@@ -10,9 +10,36 @@
   &__body {
     margin: 0;
 
-  // & .header__bottom-content {
-  //     opacity: 1; // Зробити текст видимим при завантаженні
-  //     transform: translateY(0); // Повернути положення в початкову позицію
-  //   }
+    background-image: url(../images/header-background.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+  
+    @include onDesktop {
+      background-size: 55%;
+    }
+
+    &--with-menu {
+      overflow: hidden;
+    }
+
+    // & .header__bottom-content {
+    //     opacity: 1; // Зробити текст видимим при завантаженні
+    //     transform: translateY(0); // Повернути положення в початкову позицію
+    //   }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+
+    &:target {
+      transform: translateX(0);
+    }
   }
 }

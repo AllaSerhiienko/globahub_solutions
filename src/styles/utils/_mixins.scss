@@ -23,7 +23,25 @@
 }
 
 @mixin onBigDesktop {
-  @media (min-width: 1280px) {
+  @media (min-width: 1440px) {
     @content;
+  }
+}
+
+@mixin top-actions {
+  --icon-width: 18px;
+
+  display: grid;
+  grid-template-columns: 1fr var(--icon-width) var(--icon-width);
+  justify-items: start;
+  align-items: center;
+  column-gap: 30px;
+
+  // margin-bottom: 60px;
+
+  @include onTablet {
+    --icon-width: 24px;
+
+    column-gap: 40px;
   }
 }

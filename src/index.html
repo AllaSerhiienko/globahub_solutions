@@ -15,7 +15,6 @@
     <header class="page__section header">
       <div class="container">
         <div class="header__content">
-          <path opacity=".1" d="M319.883 7C301.96 44.568 306.667 82.98 334 122.238c41 58.887 138.227 21.23 183.906 98.434 30.453 51.469 82.151 79.28 155.094 83.433V7H319.883z" fill="#0078db"></path>
           <div class="header__top">
             <a href="#" class="logo">
               <img src="images/logo.svg" alt="GlobaHub AG" class="logo__image">
@@ -25,34 +24,98 @@
               <div class="icon__tooltip">
                 +1 234 555-55-55
               </div>
-            </a>  
+            </a>
+
+            <a href="#menu" class="icon icon--menu"></a>
           </div>
 
-          <div class="header__bottom">
-            <div class="grid grid--tablet">
-              <div class="header__bottom-content grid__item grid__item--tablet-1-4 grid__item--desktop-1-6">
+          <div class="grid grid--destop header__bottom">
+            <div class="grid__item grid__item--desktop-1-6">
+              <div class="header__bottom-content">
                 <p class="header__sub-title">SMS verification service</p>
-
                 <h1 class="header__title">
                   Verify customers securely and at scale with SMS
                 </h1>
-
                 <p class="header__description">
                   Increase conversions, reduce churn, and boost revenue, thanks to the humble yet powerful text message!
                 </p>
-                 
                 <a href="#contact-us" class="button">Talk to an expert</a>
               </div>
+            </div>
 
-              <div class="grid__item grid__item--tablet-5-8 grid__item--desktop-7-12">
-                <object data="./images/header.svg" type="image/svg+xml"></object>
-              </div>
+            <div class="grid__item grid__item--desktop-7-12">
+              <!-- <div class="header__animation-container"> -->
+                <object data="./images/header.svg" type="image/svg+xml" class="header__animation"></object>
+                <!-- <img src="./images/header.svg" alt=""> -->
+              <!-- </div> -->
             </div>
           </div>
-
         </div>
       </div>
-
+      </div>
     </header>
+
+    <nav class="page__menu menu" id="menu">
+      <div class="container">
+        <div class="menu__content">
+          <div class="menu__top">
+            <a href="#" class="logo">
+              <img src="images/logo-white.svg" alt="GlobaHub AG" class="logo__image">
+            </a>
+
+            <a href="#" class="icon icon--cross"></a>
+          </div>
+
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">
+                Home
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#about-us" class="menu__link">
+                About us
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#faq" class="menu__link">
+                FAQ
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#products" class="menu__link">
+                More products
+              </a>
+            </li>
+            <li class="menu__item">
+              <a href="#contact-us" class="menu__link">
+                Contact us
+              </a>
+            </li>
+          </ul>
+          <a href="tel:+1 234 5555-55-55" class="menu__call menu__call--phone">
+            +1 234 5555-55-55
+          </a>
+          <a href="tel:+1 234 5555-55-55" class="menu__call menu__call--action">
+            Call to an expert
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- <script>
+      window.addEventListener('DOMContentLoaded', function () {
+
+        const container = document.querySelector('.header__animation-container');
+        console.log(container);
+        if (container) {
+          const backgroundImage = container.style.backgroundImage;
+          const newVersion = Math.floor(Math.random() * 1000); // Генеруємо нову версію зображення на основі часу
+
+          // Замінюємо параметр запиту в CSS background-image
+          container.style.backgroundImage = backgroundImage.replace(/\?version=\d+/, `?version=${newVersion}`);
+        }
+      });
+    </script> -->
   </body>
 </html>

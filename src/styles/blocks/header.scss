@@ -1,69 +1,192 @@
 .header {
-  background-image: url(../images/header-background.svg);
-  background-size: 85%;
-  background-repeat: no-repeat;
-  background-position: bottom 18vh left 80vh;
-
-
   &__content {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
 
-    // padding: 30px 0;
+    // border: 1px solid red;
+
     height: 100vh;
     // min-height: 100vh;
-    max-height: 1000px;
+    max-height: 1200px;
+    padding: $headerTopPaddingMobile 0 50px;
+
+    @include onTablet {
+      padding: $headerTopPaddingTablet 0 60px;
+    }
+
+    @include onDesktop {
+      padding-bottom: 50px;
+      max-height: 900px;
+      // margin: 0;
+    }
+
+    @include onBigDesktop {
+      // margin: 0 $horisontalMarginHeader;
+    }
   }
 
   &__top {
+    @include top-actions;
+  }
+
+  &__bottom {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 0;
+    flex-direction: column-reverse;
+    // justify-content: space-around;
+    justify-content: space-evenly;
+
+    // min-height: 80vh;
+    // min-height: 100%;
+    // min-height: min-content;
+    // height: 80vh;
+    height: 100%;
+    // min-height: none;
+
+    @include onTablet {
+
+      // height: 80vh;
+      // min-height: none;
+      // max-height: 1000px;
+    }
+
+    @include onDesktop {
+      display: grid;
+      margin: auto 0;
+      min-height: 100%;
+    }
   }
 
   &__bottom-content {
-    // position: relative;
-    // z-index: 1;
-    // flex-grow: 1;
-    // flex-shrink: 0;
-    // min-width: 490px;
-    max-width: 520px;
-    // margin-right: 20px;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
+    // max-width: 550px;
 
     // opacity: 0; // Початкова прозорість 0
     // transform: translateY(20px); // Початкове положення зсунуто вниз
-  
+
     // transition: opacity 0.5s ease, transform 0.5s ease; // Плавна анімація
+
+    @include onTablet {
+      padding: 0 50px;
+    }
+
+    @include onDesktop {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      max-width: 520px;
+      align-items: start;
+      justify-content: center;
+    }
   }
 
   &__sub-title {
-    margin-bottom: 18px;
-    padding: 6px 0;
+    margin: 0 0 18px;
+    padding: 0;
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: 2px;
     text-transform: uppercase;
+
+    @include onDesktop {
+      margin-bottom: 22px;
+    }
   }
 
   &__title {
-    margin: 0;
+    margin: 0 0 28px;
     padding: 0;
     letter-spacing: -0.5px;
     font-weight: 400;
-    margin-bottom: 36px;
-    font-size: 4rem;
-    line-height: 64px;
+    font-size: 2rem;
+    line-height: 100%;
+    text-align: center;
+
+    @include onBigMobile {
+      font-size: 2.4rem;
+    }
+
+    @include onTablet {
+      margin-bottom: 42px;
+      font-size: 3rem;
+    }
+
+
+    @include onDesktop {
+      margin-bottom: 48px;
+      // font-size: 4rem;
+      font-size: 4rem;
+      text-align: left;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1150px) {
+      font-size: 3.4rem;
+    }    
   }
 
   &__description {
-    margin-bottom: 90px;
+    margin: 0 0 26px;
     line-height: 24px;
     letter-spacing: -0.5px;
     font-size: 1.125rem;
+    text-align: center;
+
+    @include onDesktop {
+      margin: 0 0 30px;
+      text-align: left;
+    }
   }
 
+  // &__animation-container {
+    // background-image: url(../images/header.svg);
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // height: 35vh;
+
+    // margin: 14px auto;
+
+    // @include onTablet {
+    //   height: 45vh;
+    // }
+
+    // @include onDesktop {
+    //   display: flex;
+    //   flex-direction: column;
+
+    //   margin: auto 0;
+    //   width: 100%;
+    //   min-width: none;
+    //   max-width: none;
+    //   height: 100%;
+    //   justify-content: center;
+    // }
+    
+  // }
+
+  &__animation {
+    height: 35vh;
+    width: 100%;
+    // margin: 14px auto;
+
+    @include onTablet {
+      height: 45vh;
+    }
+
+    @include onDesktop {
+      display: flex;
+      flex-direction: column;
+
+      margin: auto 0;
+      width: 100%;
+      min-width: none;
+      max-width: none;
+      height: 100%;
+      justify-content: center;
+    }
+  }
 }
