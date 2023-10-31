@@ -40,4 +40,12 @@
   &:hover::before {
     transform: translateX(0);
   }
+
+  &--light {
+    // color: #fff;
+    border-color: #fff;
+    background-color: #fff;
+    // background-color: #F9EC75;
+    // background-color: #ffee33;
+  }
 }

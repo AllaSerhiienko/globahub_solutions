@@ -1,0 +1,61 @@
+.phone-section {
+  box-sizing: border-box;
+  background-color: $colorBackgroundLight;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    // max-width: 87.5rem;
+
+    @include onDesktop {
+      flex-direction: row;
+      // flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    // flex-shrink: 0;
+    // width: 45%;
+    width: 100%;
+
+    @include onDesktop {
+      width: calc((100% - 100px) / 2);
+    }
+  }
+
+  &__description {
+    @include paragraphText;
+    margin-bottom: 48px;
+  }
+
+  &__phone-container {
+    margin-bottom: -30px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+
+    @include onDesktop {
+      margin-bottom: -60px;
+      width: calc((100% - 100px) / 2);
+      height: 630px;
+    }
+  }
+
+  &__phone {
+    margin: 0 auto;
+    padding: 120px 0 55px;
+    width: 100%;
+    max-width: 375px;
+    height: 630px;
+
+    border-radius: 46px;
+    box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.14);
+
+    overflow: hidden;
+  }
+}

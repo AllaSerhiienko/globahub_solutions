@@ -7,31 +7,20 @@
 
   &__title {
     text-align: center;
-    margin-right: 10px;
-    margin-left: 10px;
-    // margin-bottom: 20px;
+    margin: 0 10px 30px 10px;
 
     @include onTablet {
-      margin-right: 20px;
-      margin-left: 20px;
+      margin: 0 20px 50px 20px;
     }
   }
 
   &__cards {
     display: flex;
     flex-direction: row;
-    // align-items: flex-end;
     justify-content: flex-start;
     flex-wrap: wrap;
-    // margin-left: -15px;
-    // margin-right: -15px;
     max-width: 1040px;
     margin: 0 auto;
-
-    // white-space: nowrap;
-    // will-change: transform;
-
-    // @include onTablet {}
   }
 
   &__card {
@@ -44,7 +33,5 @@
       width: calc(100% / 3);
       padding: 0 15px;
     }
-
-    // border: 1px solid red;
   }
 }

@@ -1,0 +1,122 @@
+.code-block {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include onDesktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    box-sizing: border-box;
+    width: 100%;
+
+    @include onDesktop {
+      width: calc((100% - 90px) / 2);
+    }
+  }
+
+  &__paragraph {
+    @include paragraphText;
+    margin-bottom: 32px;
+
+    @include onDesktop {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__list {
+    margin: 0 0 48px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    @include paragraphText;
+    padding-left: 34px;
+    font-size: 1rem;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      margin-left: -34px;
+      width: 22px;
+      height: 22px;
+      background-image: url(../images/check.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    color: #006fc9;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__code-container {
+    box-sizing: border-box;
+    width: 100%;
+    height: max-content;
+
+    padding: 20px 30px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    background-color: #0A273D;
+
+    @include onDesktop {
+      width: calc((100% - 90px) / 2);
+    }
+  }
+
+  &__code-title {
+    width: max-content;
+    vertical-align: top;
+    padding: 6px 12px;
+
+    border-radius: 3px;
+    opacity: 1;
+    background: #10456C;
+
+    -webkit-font-smoothing: antialiased;
+    font-size: .75rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  &__code-snippet {
+    padding: 5px 10px;
+    max-width: 100%;
+    display: block;
+
+    color: #1d7ec5;
+    -webkit-font-smoothing: antialiased;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+    font-size: 14px;
+    font-family: Consolas,"Liberation Mono",Courier,monospace;
+    font-weight: 400;
+
+    word-wrap: break-word;
+    // white-space: break-spaces;
+    overflow-x: auto;
+  }
+
+  &__text-yellow {
+    color: #FFBE3C;
+  }
+
+}

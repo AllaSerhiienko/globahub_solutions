@@ -8,13 +8,22 @@ window.addEventListener('hashchange', () => {
   }
 });
 
-const form = document.querySelector('form');
 
-function submit(event) {
-  event.preventDefault();
-  form.reset();
+const phoneScreen = document.querySelector('.phone__screen');
+
+function showPhoneScreen() {
+  const screenTop = phoneScreen.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (screenTop + 80 < windowHeight) {
+    phoneScreen.classList.add('phone__screen--show');
+    window.removeEventListener('scroll', showPhoneScreen);
+  }
 }
 
-form.addEventListener('submit', submit);
+window.addEventListener('load', showPhoneScreen);
+
+window.addEventListener('scroll', showPhoneScreen);
+
 
 

@@ -50,4 +50,15 @@
     grid-column: -2 / -1;
     background-image: url(../images/cross.svg);
   }
+
+  &--chat {
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background-image: url(../images/chat.svg);
+    position: absolute;
+    // left: 10%;
+    // top: 50%;
+    transform: translate(-32px, 18px);
+  }
 }

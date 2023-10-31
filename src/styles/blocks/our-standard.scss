@@ -1,0 +1,54 @@
+.our-standard {
+  background-color: $colorBackgroundDark;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include onDesktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__image-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 40px;
+    
+    @include onDesktop {
+      margin: 0;
+      width: calc((100% - 90px) / 2);
+    }
+  }
+
+  &__image {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+
+    @include onDesktop {
+      width: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+  }
+
+  &__content {
+    box-sizing: border-box;
+
+    @include onDesktop {
+      width: calc((100% - 90px) / 2);
+    }
+  }
+
+  &__description {
+    @include paragraphText;
+
+    color: #fff;
+    margin-bottom: 48px;
+  }
+}

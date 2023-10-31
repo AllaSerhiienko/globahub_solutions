@@ -92,6 +92,12 @@
       font-size: 12px;
       line-height: 16px;
       letter-spacing: 2px;
+
+      transition: border-bottom 0.3s;
+
+      &:hover {
+        border-color: transparent;
+      }
     }
   }
 }
