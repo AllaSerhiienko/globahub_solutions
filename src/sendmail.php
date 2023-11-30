@@ -2,12 +2,12 @@
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
 
-	require '../dist/phpmailer/Exception.php';
-	require '../dist/phpmailer/PHPMailer.php';
+	require './phpmailer/Exception.php';
+	require './phpmailer/PHPMailer.php';
 
 	$mail = new PHPMailer(true);
 	$mail->CharSet = 'UTF-8';
-	$mail->setLanguage('en', '../dist/phpmailer/language/');
+	$mail->setLanguage('en', './phpmailer/language/');
 	$mail->IsHTML(true);
 
 	//От кого письмо
