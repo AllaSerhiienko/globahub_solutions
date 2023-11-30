@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		if (error === 0) {
 			form.classList.add('_sending');
-			let response = await fetch('../src/sendmail.php', {
+			let response = await fetch('https://AllaSerhiienko.github.io/globahub_solutions/src/sendmail.php', {
 				method: 'POST',
 				body: formData
 			});
