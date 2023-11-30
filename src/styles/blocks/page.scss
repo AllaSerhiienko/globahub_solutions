@@ -25,11 +25,6 @@
     &--with-menu {
       overflow: hidden;
     }
-
-    // & .header__bottom-content {
-    //     opacity: 1; // Зробити текст видимим при завантаженні
-    //     transform: translateY(0); // Повернути положення в початкову позицію
-    //   }
   }
 
   &__menu {
@@ -58,6 +53,7 @@
     @include onDesktop {
       // margin-bottom: 100px;
       padding: 60px 0;
+      // padding: 70px 0;
       margin: 0 30px;
     }
   }

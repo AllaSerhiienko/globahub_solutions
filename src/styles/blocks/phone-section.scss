@@ -8,7 +8,8 @@
     // max-width: 87.5rem;
 
     @include onDesktop {
-      flex-direction: row;
+      flex-direction: row-reverse;
+      // flex-direction: row;
       // flex-wrap: nowrap;
       justify-content: space-between;
     }
@@ -23,7 +24,7 @@
     width: 100%;
 
     @include onDesktop {
-      width: calc((100% - 100px) / 2);
+      width: calc((100% - 70px) / 2);
     }
   }
 
@@ -41,8 +42,8 @@
 
     @include onDesktop {
       margin-bottom: -60px;
-      width: calc((100% - 100px) / 2);
-      height: 630px;
+      width: calc((100% - 70px) / 2);
+      height: 530px;
     }
   }
 
